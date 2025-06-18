@@ -104,7 +104,10 @@ while True:
             board.remove(x)
             for y in findAdjacant(board, x):
                 board.conquer(y, blue)
+                
         if not checkBoom(board, blue):
+            break
+        elif checkEnd(board):
             break
         else:
             print(board)
