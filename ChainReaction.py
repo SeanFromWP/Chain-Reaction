@@ -37,7 +37,7 @@ class Gameboard():
         self.grid[coord[0]][coord[1]] = [symbol(None), 0]
 
     def conquer(self, coord: tuple, isBlue: bool) -> None:
-        self.grid[coord[0]][coord[1]] = [symbol(isBlue), self.grid[coord[0]][coord[1]][1] + 1]
+        self.grid[coord[0]][coord[1]] = [symbol(isBlue), min(self.grid[coord[0]][coord[1]][1] + 1, self.boom)]
 
 #====== Tool Funcs ======
     
